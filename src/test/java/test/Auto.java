@@ -19,11 +19,8 @@ public class Auto {
 		
 	}
 	
-	int cantidadAsientos() {
-		int total = 0;
-		for(int i: asientos) {
-			
-			
+int cantidadAsientos() {
+		pass
 		}
 		
 		
