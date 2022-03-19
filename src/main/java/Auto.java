@@ -1,10 +1,11 @@
 package test;
+
 public class Auto{
 	String modelo;
 	
 	int precio;
 		
-	Asiento[] asientos;
+	Asiento asientos[];
 		
 	String marca;
 		
@@ -20,7 +21,7 @@ public class Auto{
 
 			if(i != null) {
 				
-				total += 1;
+				total ++;
 			}
 			
 			
