@@ -1,5 +1,4 @@
-package test;
-import java.util.*;
+
 public class Auto {
 	
 	static int cantidadCreados;
@@ -11,7 +10,7 @@ public class Auto {
 		
 		int precio;
 		
-		ArrayList<Asiento> asientos = new ArrayList<>();
+		Asiento[] asientos;
 		
 		String marca;
 		
@@ -21,31 +20,31 @@ public class Auto {
 	
 	int cantidadAsientos() {
 		int total;
-		for(Asiento i:asientos) {
-			
-			boolean verificar = i.getClass() == Asiento.class;
-			
-			if(verificar == true) {
+		for(Asiento i:this.asientos) {
+
+			if(i != null) {
 				
-				return total += 1;
-			}else {
-				
-				return total;
+				total += 1;
 			}
 			
 			
 		}
+		return total;
 	}
 	
 	
 	String verificarIntegridad() {
 		
-		for(Asiento x: asientos) {
+		for(Asiento x: this.asientos) {
 			
-			if(registro == x.registro) {
+			if(x != null) {
 				
-				return "Auto original";
+				if(this.registro == x.registro && this.registro == this.motor.registro) {
+					
+					return "Auto original";
+				}
 			}else {
+				
 				return "Las piezas no son originales";
 			}
 		}
